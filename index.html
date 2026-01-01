@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEL | Кофе и Пространство</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'jel-bg': '#F9F5E3', 'jel-brown': '#4A3B32' },
+                    fontFamily: { 'soft': ['"Comfortaa"', 'cursive'], 'body': ['"Montserrat"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F9F5E3; color: #4A3B32; -webkit-font-smoothing: antialiased; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .nav-glass { background: rgba(249, 245, 227, 0.96); backdrop-filter: blur(10px); }
+        .glass-card { background: rgba(255, 255, 255, 0.5); border: 1px solid rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="antialiased font-body">
+
+    <nav class="fixed top-0 left-0 w-full z-[100] px-6 py-5 nav-glass flex justify-between items-center">
+        <span class="font-soft font-bold uppercase tracking-tighter text-xl">JEL</span>
+        <div class="flex gap-6 text-[10px] font-bold uppercase tracking-widest">
+            <a href="#menu-section" class="hover:opacity-50 transition-opacity">Меню</a>
+            <a href="#about" class="hover:opacity-50 transition-opacity">О нас</a>
+            <a href="#location" class="hover:opacity-50 transition-opacity">Локация</a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-[55vh] flex flex-col items-center justify-center text-center px-6 reveal active pt-24">
+        <h1 class="font-soft text-8xl md:text-9xl tracking-tighter mb-4 uppercase">JEL</h1>
+        <p class="text-[10px] uppercase tracking-[0.4em] font-bold opacity-40 mb-10 italic">Кофе • Атмосфера • Душа</p>
+        <div class="space-y-1 text-[11px] uppercase tracking-widest font-medium opacity-80 italic">
+            <p>Панфилова 92</p>
+            <p>08:00 – 22:00</p>
+        </div>
+    </header>
+
+    <section class="mb-24 reveal">
+        <div class="flex overflow-x-auto gap-4 px-6 no-scrollbar">
+            <img src="https://i.ibb.co/xnjJyr2/IMG-0302.jpg" class="w-72 h-[450px] object-cover rounded-[40px] shadow-lg flex-shrink-0">
+            <img src="https://i.ibb.co/vx7Qv186/IMG-0303.jpg" class="w-72 h-[450px] object-cover rounded-[40px] shadow-lg flex-shrink-0">
+            <img src="https://i.ibb.co/4nQJJVZC/IMG-0305.jpg" class="w-72 h-[450px] object-cover rounded-[40px] shadow-lg flex-shrink-0">
+            <img src="https://i.ibb.co/S46XF7Kr/IMG-0304.jpg" class="w-72 h-[450px] object-cover rounded-[40px] shadow-lg flex-shrink-0">
+            <img src="https://i.ibb.co/g0Q2c7X/IMG-0306.jpg" class="w-72 h-[450px] object-cover rounded-[40px] shadow-lg flex-shrink-0">
+        </div>
+    </section>
+
+    <section id="about" class="px-6 mb-32 reveal max-w-md mx-auto">
+        <h2 class="font-soft text-3xl text-center mb-12 uppercase tracking-widest italic">Пространство</h2>
+        <div class="space-y-4">
+            <div class="glass-card p-6 rounded-[35px] flex items-center gap-5 shadow-sm">
+                <span class="text-3xl">💻</span>
+                <div>
+                    <h3 class="font-bold text-[11px] uppercase tracking-widest">Работа и Учеба</h3>
+                    <p class="text-[10px] opacity-60 uppercase tracking-tighter leading-tight mt-1">Тихий второй этаж и стабильный Wi-Fi для ваших задач.</p>
+                </div>
+            </div>
+            <div class="glass-card p-6 rounded-[35px] flex items-center gap-5 shadow-sm">
+                <span class="text-3xl">📚</span>
+                <div>
+                    <h3 class="font-bold text-[11px] uppercase tracking-widest">Книги и Игры</h3>
+                    <p class="text-[10px] opacity-60 uppercase tracking-tighter leading-tight mt-1">Приглушенный свет и библиотека для идеального отдыха.</p>
+                </div>
+            </div>
+            <div class="glass-card p-6 rounded-[35px] flex items-center gap-5 shadow-sm">
+                <span class="text-3xl">🐈</span>
+                <div>
+                    <h3 class="font-bold text-[11px] uppercase tracking-widest">Друзья JEL</h3>
+                    <p class="text-[10px] opacity-60 uppercase tracking-tighter leading-tight mt-1">Наш кот Пушко и команда всегда рады гостям.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-32 reveal">
+        <h2 class="font-soft text-2xl text-center mb-10 uppercase tracking-[0.2em] italic px-6">Гости говорят</h2>
+        <div class="flex overflow-x-auto gap-4 px-6 no-scrollbar pb-6">
+            <div class="min-w-[300px] bg-white/60 p-8 rounded-[45px] shadow-sm border border-white">
+                <p class="text-sm italic leading-relaxed">«Безусловно, наше любимое место в Алматы! Очень уютный интерьер, качели и классный кот Пушко.»</p>
+                <div class="w-8 h-px bg-jel-brown/10 mt-6"></div>
+            </div>
+            <div class="min-w-[300px] bg-white/60 p-8 rounded-[45px] shadow-sm border border-white">
+                <p class="text-sm italic leading-relaxed">«Сотрудники стали уже как семья, знают, что мы любим. Кофе отличный, сервис прекрасный!»</p>
+                <div class="w-8 h-px bg-jel-brown/10 mt-6"></div>
+            </div>
+            <div class="min-w-[300px] bg-white/60 p-8 rounded-[45px] shadow-sm border border-white">
+                <p class="text-sm italic leading-relaxed">«WiFi очень быстрый, второй этаж хорош для работы. Кот — настоящий хозяин бизнеса!»</p>
+                <div class="w-8 h-px bg-jel-brown/10 mt-6"></div>
+            </div>
+            <div class="min-w-[300px] bg-white/60 p-8 rounded-[45px] shadow-sm border border-white">
+                <p class="text-sm italic leading-relaxed">«Прикольное место. Интерьер очень приятный: приглушённый свет, картины и книги. Всё выглядит гармонично.»</p>
+                <div class="w-8 h-px bg-jel-brown/10 mt-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu-section" class="px-6 mb-32 reveal pt-16">
+        <h2 class="font-soft text-4xl text-center mb-12 uppercase tracking-widest">МЕНЮ</h2>
+        <nav class="flex justify-center gap-2 mb-12">
+            <button onclick="switchMenu('coffee')" id="btn-coffee" class="menu-tab px-6 py-3 rounded-full text-[9px] font-bold uppercase tracking-widest bg-jel-brown text-white shadow-lg">Кофе</button>
+            <button onclick="switchMenu('drinks')" id="btn-drinks" class="menu-tab px-6 py-3 rounded-full text-[9px] font-bold uppercase tracking-widest hover:bg-jel-brown/5">Напитки</button>
+            <button onclick="switchMenu('food')" id="btn-food" class="menu-tab px-6 py-3 rounded-full text-[9px] font-bold uppercase tracking-widest hover:bg-jel-brown/5">Еда</button>
+        </nav>
+        <div id="menu-items" class="max-w-md mx-auto space-y-7 px-2 min-h-[450px]"></div>
+    </section>
+
+    <footer id="location" class="px-6 pb-24 reveal pt-16">
+        <div class="max-w-md mx-auto glass-card p-12 rounded-[60px] text-center shadow-lg">
+            <p class="font-soft text-2xl mb-10 uppercase tracking-widest italic">Ждем вас</p>
+            <div class="flex flex-col gap-4 mb-12">
+                <a href="https://share.google/qQPZyNKklnadA8zkU" target="_blank" class="bg-jel-brown text-white py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center">Открыть 2ГИС</a>
+                <a href="https://share.google/H06muEJqgfZG0gs4V" target="_blank" class="border-2 border-jel-brown py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center">Instagram</a>
+                <a href="https://wa.me/77075839494" target="_blank" class="bg-green-700/10 text-green-800 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center">WhatsApp</a>
+            </div>
+            <p class="text-[9px] opacity-40 uppercase tracking-[0.4em] font-bold italic">Алматы, Панфилова 92</p>
+        </div>
+    </footer>
+
+    <script>
+        const data = {
+            coffee: [
+                { g: "Спешелти" },
+                { n: "Зеленая Матча", p: "1 600", d: "Очень нравится гостям" },
+                { n: "Голубая Матча", p: "1 600" },
+                { n: "Эспрессо Тоник", p: "1 900" },
+                { n: "Бамбл", p: "1 800" },
+                { g: "Классика" },
+                { n: "Эспрессо", p: "1 000" }, { n: "Американо", p: "1 200" }, { n: "Флэт Уайт", p: "1 400" },
+                { n: "Капучино / Латте", p: "1 500" }, { n: "Раф / Мокка", p: "1 800" }, { n: "Аффогато", p: "1 500" }
+            ],
+            drinks: [
+                { g: "Чайная Карта" },
+                { n: "Молочный Улун", p: "1 200", d: "Завариваем правильно" },
+                { n: "Облепиха / Имбирь", p: "1 700" },
+                { n: "Малина / Вишня", p: "2 600", d: "Чайник на компанию" },
+                { g: "Холодные напитки" },
+                { n: "Манго-Маракуйя", p: "1 700" },
+                { n: "Малина-Мята", p: "1 700" },
+                { n: "Имбирь-Цитрус", p: "1 700" }
+            ],
+            food: [
+                { g: "Kitchen" },
+                { n: "Сэндвич «Как дома»", p: "1 790", d: "Курица, сыр, овощи" },
+                { g: "Выпечка" },
+                { n: "Миндальный круассан", p: "1 990", d: "Наш фаворит" },
+                { n: "Шоколадный круассан", p: "1 290" },
+                { n: "Эклер", p: "1 190" },
+                { n: "Chunky Cookie", p: "690" },
+                { n: "Макарунсы", p: "1 790" }
+            ]
+        };
+
+        function switchMenu(cat) {
+            document.querySelectorAll('.menu-tab').forEach(b => {
+                b.classList.remove('bg-jel-brown', 'text-white', 'shadow-lg');
+                b.classList.add('hover:bg-jel-brown/5');
+            });
+            document.getElementById('btn-' + cat).classList.add('bg-jel-brown', 'text-white', 'shadow-lg');
+            const container = document.getElementById('menu-items');
+            container.style.opacity = 0;
+            setTimeout(() => {
+                let html = '';
+                data[cat].forEach(item => {
+                    if (item.g) {
+                        html += `<h3 class="text-[10px] font-bold uppercase tracking-[0.3em] opacity-30 pt-10 pb-2 border-b border-jel-brown/10 mb-8 font-body">${item.g}</h3>`;
+                    } else {
+                        html += `<div class="flex flex-col mb-6"><div class="flex justify-between items-baseline"><span class="font-soft text-xl tracking-tight">${item.n}</span><div class="flex-grow border-b border-jel-brown/10 mx-4 opacity-40"></div><span class="font-bold text-sm tracking-tighter">${item.p}</span></div>${item.d ? `<p class="text-[9px] opacity-40 uppercase tracking-widest font-bold mt-1 ml-1">${item.d}</p>` : ''}</div>`;
+                    }
+                });
+                container.innerHTML = html; container.style.opacity = 1;
+            }, 200);
+        }
+        switchMenu('coffee');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
